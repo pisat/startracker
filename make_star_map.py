@@ -36,7 +36,7 @@ def get_data_from_csv(filename):
 
 	return points
 
-cartesian_stars = get_data_from_csv('star-catalogue/hygxyz_bigger9.csv')
+cartesian_stars = get_data_from_csv('hygxyz_bigger9.csv')
 polar_stars = map(get_polar_from, cartesian_stars)
 stereographic_stars = map(lambda x: [1/(tan(x.theta)*2), x.vphi], polar_stars) # R, phi
 normalized_cartesian = map(lambda x: Point(x.x/10000000,x.y/10000000,x.z/10000000), cartesian_stars)
