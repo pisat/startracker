@@ -5,6 +5,8 @@ piSat aims to implement a raspberry pi cubesat design to downlink high quality a
 
 This project is solving the PhoneSat: Convert Your Smartphone Into a Satellite challenge.
 
+[Cubesat frame tests](https://raw.githubusercontent.com/pisat/startracker/master/Photos/foto.JPG "Cubesat frame tests")
+
 ##Description
 piSat aims to implement a raspberry pi cubesat design to downlink high quality astrophotography data above the atmosphere.
 
@@ -29,9 +31,11 @@ In reality, we are required to make the code more robust than this as our databa
 Additionally, we worked on the problem of high data rate transmission for cubesats. Typically, cubesats have simple radios and minimal downlink rates (1 baud or lower). We used the bladeRF software defined radio (SDR) to increase the data rates. This involved writing c code for taking raw samples from the SDR and analysing them to extract data.
 
 We got this to work reasonably well to transmit short messages, however the analysis is not yet robust enough to send whole images as we would like to.
+![Doing the presentation](https://raw.githubusercontent.com/pisat/startracker/master/Photos/marcello_presentation.jpg "Marcello Talking")
 
 Overall, we gained a lot of knowledge of the OpenCV computer vision library and SDR radio processing.
 
+Also, we got tweeted by nasa! ![Nasa Tweet](https://raw.githubusercontent.com/pisat/startracker/master/Photos/Screenshot%202014-04-13%2023.12.51.png "Nasa Tweet!")
 
 ##PROJECT INFORMATION
 
