@@ -5,7 +5,7 @@ piSat aims to implement a raspberry pi cubesat design to downlink high quality a
 
 This project is solving the PhoneSat: Convert Your Smartphone Into a Satellite challenge.
 
-[Cubesat frame tests](https://raw.githubusercontent.com/pisat/startracker/master/Photos/foto.JPG "Cubesat frame tests")
+![Cubesat frame tests](https://raw.githubusercontent.com/pisat/startracker/master/Photos/foto.JPG "Cubesat frame tests")
 
 ##Description
 piSat aims to implement a raspberry pi cubesat design to downlink high quality astrophotography data above the atmosphere.
