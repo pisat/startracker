@@ -2,23 +2,25 @@ import csv
 from math import *
 
 class Point:
-	def __init__(self, x, y, z):
+	def __init__(self, x, y, z, mag=0):
 		self.x = x
 		self.y = y
 		self.z = z
+		self.mag = mag
 
 class Polar:
-	def __init__(self, r, theta, vphi):
+	def __init__(self, r, theta, vphi, mag=0):
 		self.r = r
 		self.theta = theta  # 0 < theta < pi
 		self.vphi = vphi    # -pi < vphi < pi
+		self.mag = mag
 
 
 def get_polar_from(point):
 	r = sqrt(point.x**2 + point.y**2 + point.z**2)
 	theta = acos(point.z/r)
 	varphi = atan2(point.y,point.x)
-	return Polar(r, theta, varphi)
+	return Polar(r, theta, varphi, point.mag)
 
 def get_data_from_csv(filename):
 	points = []
@@ -28,6 +30,7 @@ def get_data_from_csv(filename):
 		for row in reader:
 			try:
 				data = row[17:20]
+				data.append(row[13])
 				data = map(float,data)
 			except:
 				pass
@@ -46,8 +49,13 @@ import pylab
 
 a1 = map(lambda x: x.theta, polar_stars)
 a2 = map(lambda x: x.vphi, polar_stars)
+a3 = map(lambda x: x.mag, polar_stars)
+
 plt.clf()
-plt.scatter(a1, a2, s=0.01)
+#plt.scatter(a1, a2, s=0.01)
+#plt.scatter(a1,a2,s=map(lambda x: x/21.0,a3))
+#plt.scatter(a1,a2,s=map(lambda x: x/210.0,a3))
+plt.scatter(a1,a2,s=map(lambda x: exp(x)/exp(21.0),a3))
 plt.show()
 plt.clf()
 
