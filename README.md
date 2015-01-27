@@ -35,7 +35,12 @@ We got this to work reasonably well to transmit short messages, however the anal
 
 Overall, we gained a lot of knowledge of the OpenCV computer vision library and SDR radio processing.
 
-Also, we got tweeted by nasa! ![Nasa Tweet](https://raw.githubusercontent.com/pisat/startracker/master/Photos/Screenshot%202014-04-13%2023.12.51.png "Nasa Tweet!")
+![Rendered Starfield after Processing](https://raw.githubusercontent.com/pisat/startracker/master/temp.jpg)
+
+
+Also, we got tweeted by nasa! 
+
+![Nasa Tweet](https://raw.githubusercontent.com/pisat/startracker/master/Photos/Screenshot%202014-04-13%2023.12.51.png "Nasa Tweet!")
 
 ##PROJECT INFORMATION
 
